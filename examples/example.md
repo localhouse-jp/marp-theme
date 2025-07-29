@@ -9,27 +9,27 @@ html: true
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ 
-    startOnLoad: true,
-    flowchart: {
-      useMaxWidth: true,
-      htmlLabels: true,
-      nodeSpacing: 80,
-      rankSpacing: 80,
-      padding: 5,
-      curve: 'basis'
-    },
-    sequence: {
-      useMaxWidth: true,
-      width: 150
-    },
-    gantt: {
-      useMaxWidth: true,
-      fontSize: 12
-    },
-    fontFamily: 'LINE Seed JP, Helvetica Neue, Arial, sans-serif',
-    fontSize: 12
-  });
+  mermaid.initialize({
+  startOnLoad: true,
+  flowchart: {
+    useMaxWidth: true,
+    htmlLabels: true,
+    nodeSpacing: 80,
+    rankSpacing: 80,
+    padding: 10,
+    curve: 'basis'
+  },
+  sequence: {
+    useMaxWidth: true,
+    width: 150
+  },
+  gantt: {
+    useMaxWidth: true,
+    fontSize: 14
+  },
+  fontFamily: 'LINE Seed JP, Helvetica Neue, Arial, sans-serif',
+  fontSize: 16
+});
 </script>
 
 # 技術プレゼンタイトル
