@@ -1,0 +1,29 @@
+/* Header and Footer */
+header, footer {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  font-size: 0.75em;
+  color: var(--corporate-footer);
+}
+
+header {
+  top: 25px;
+}
+
+footer {
+  bottom: 25px;
+  border-top: 1px solid var(--corporate-border);
+  padding-top: 10px;
+  text-align: right;
+}
+
+/* Paginate */
+section::after {
+  content: attr(data-marp-pagination);
+  position: absolute;
+  bottom: 25px;
+  left: 40px;
+  font-size: 0.75em;
+  color: var(--corporate-footer);
+}

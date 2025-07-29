@@ -1,0 +1,83 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build All",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build CSS",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build:css"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Build HTML",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build:html"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Build PDF",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build:pdf"],
+      "group": "build"
+    },
+    {
+      "label": "Build PowerPoint",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build:pptx"],
+      "group": "build"
+    },
+    {
+      "label": "Clean Build",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "clean"],
+      "group": "build"
+    },
+    {
+      "label": "Development Build",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "group": "build"
+    },
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "npm",
+      "args": ["install"],
+      "group": "build"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  // Marpプロジェクト用推奨拡張機能
+  "recommendations": [
+    "marp-team.marp-vscode",
+    "yzhang.markdown-all-in-one", 
+    "davidanson.vscode-markdownlint",
+    "ms-vscode.vscode-json",
+    "bradlc.vscode-tailwindcss",
+    "formulahendry.auto-rename-tag",
+    "esbenp.prettier-vscode"
+  ]
+}

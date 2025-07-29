@@ -1,0 +1,74 @@
+{
+  // Marp設定
+  "markdown.marp.themes": [
+    "./src/localhouse-blue.css"
+  ],
+  "markdown.marp.html": "all",
+  "markdown.marp.enableScriptExecution": true,
+  "markdown.marp.engine": "marp-cli",
+  
+  // Markdownプレビュー設定
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.markEditorSelection": true,
+  
+  // ファイルエクスプローラー設定
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/examples/*.html": false,
+    "**/examples/*.pdf": false
+  },
+  
+  // CSS・Markdown言語設定
+  "css.validate": true,
+  "css.lint.unknownAtRules": "ignore",
+  "markdown.validate.enabled": true,
+  
+  // エディター設定
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "on",
+  
+  // ファイル関連付け
+  "files.associations": {
+    "*.md": "markdown",
+    "*.css": "css"
+  },
+  
+  // 自動保存設定
+  "files.autoSave": "onFocusChange",
+  
+  // プロジェクト固有設定
+  "emmet.includeLanguages": {
+    "markdown": "html"
+  },
+  
+  // Git設定
+  "git.ignoreLimitWarning": true,
+  
+  // タスク・デバッグ用設定
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  
+  // 言語固有設定
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.quickSuggestions": {
+      "comments": false,
+      "strings": true,
+      "other": true
+    }
+  },
+  
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}

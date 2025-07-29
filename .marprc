@@ -1,0 +1,4 @@
+{
+  "themeSet": ["./src/localhouse-blue.css"],
+  "markdownItPlugins": ["@wekanteam/markdown-it-mermaid"]
+}

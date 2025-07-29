@@ -1,0 +1,60 @@
+{
+  "name": "@localhouse/marp-theme-localhouse-blue",
+  "version": "1.0.0",
+  "description": "A professional blue-themed presentation template for Marp with Mermaid diagram support",
+  "main": "localhouse-blue.css",
+  "files": [
+    "src/localhouse-blue.css",
+    "README.md",
+    "examples/example.md"
+  ],
+  "scripts": {
+    "build": "npm run build:css && npm run build:html",
+    "build:css": "cp src/localhouse-blue.css localhouse-blue.css",
+    "build:html": "npx marp examples/example.md --html --theme src/localhouse-blue.css -o examples/example.html",
+    "build:pdf": "npx marp examples/example.md --pdf --theme src/localhouse-blue.css -o examples/example.pdf",
+    "build:pptx": "npx marp examples/example.md --pptx --theme src/localhouse-blue.css -o examples/example.pptx",
+    "dev": "npm run build:css && npm run build:html",
+    "clean": "rm -f localhouse-blue.css examples/*.html examples/*.pdf examples/*.pptx"
+  },
+  "keywords": [
+    "marp",
+    "theme",
+    "presentation",
+    "blue",
+    "corporate",
+    "mermaid",
+    "japanese",
+    "localhouse"
+  ],
+  "author": "LOCALHOUSE",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/localhouse/marp-theme-localhouse-blue"
+  },
+  "bugs": {
+    "url": "https://github.com/localhouse/marp-theme-localhouse-blue/issues"
+  },
+  "homepage": "https://github.com/localhouse/marp-theme-localhouse-blue#readme",
+  "peerDependencies": {
+    "@marp-team/marp-cli": "^3.0.0"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^3.4.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@wekanteam/markdown-it-mermaid": "^0.6.4"
+  },
+  "marp": {
+    "themeSet": [
+      "./localhouse-blue.css"
+    ],
+    "markdownItPlugins": [
+      "@wekanteam/markdown-it-mermaid"
+    ]
+  }
+}
