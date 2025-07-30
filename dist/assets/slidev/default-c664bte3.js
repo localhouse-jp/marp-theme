@@ -1,0 +1,1 @@
+import{f as o,o as t,j as s}from"../modules/vue-CvH29o6u.js";import{_ as r}from"../index-DD1rHk2W.js";const c={},a={class:"slidev-layout default"};function n(e,l){return t(),o("div",a,[s(e.$slots,"default")])}const f=r(c,[["render",n]]);export{f as I};

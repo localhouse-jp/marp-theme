@@ -1,0 +1,583 @@
+/* ============================================
+   Slidev Localhouse Blue Theme
+   Professional presentation theme
+   ============================================ */
+
+/* External Font Imports */
+@import url('https://cdn.jsdelivr.net/npm/line-seed-jp/line-seed-jp.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* ============================================
+   CSS Custom Properties (Variables)
+   ============================================ */
+:root {
+  /* Color Palette */
+  --corporate-primary: #003366;
+  --corporate-accent: #0055A4;
+  --corporate-secondary: #004488;
+  --corporate-light: #f8f9fa;
+  --corporate-text: #333;
+  --corporate-muted: #555;
+  --corporate-border: #eee;
+  --corporate-code-bg: #f6f8fa;
+  --corporate-table-border: #ddd;
+  --corporate-table-header: #f2f2f2;
+  --corporate-footer: #888;
+
+  /* Typography */
+  --font-family-main: 'LINE Seed JP', 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', 'Meiryo', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Menlo', 'Consolas', 'Monaco', monospace;
+  --font-size-base: 1.2rem;
+  --line-height-base: 1.6;
+
+  /* Spacing */
+  --spacing-base: 2rem;
+  --spacing-small: 1rem;
+  --spacing-large: 3rem;
+
+  /* Border Radius */
+  --border-radius: 6px;
+}
+
+/* ============================================
+   Base Styles & Reset
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: var(--font-family-main);
+  background-color: #fff;
+  color: var(--corporate-text);
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   Slidev Base Layout
+   ============================================ */
+.slidev-page,
+.slidev-layout,
+.slidev-page-root,
+.slide-container {
+  background-color: #fff;
+  color: var(--corporate-text);
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  padding: var(--spacing-base);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slidev-page-container,
+.slide-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--corporate-primary);
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--corporate-accent);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-left: 5px solid var(--corporate-accent);
+  padding-left: 0.5em;
+  line-height: 1.3;
+  position: absolute;
+  top: var(--spacing-base);
+  left: var(--spacing-base);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--corporate-secondary);
+  line-height: 1.4;
+}
+
+/* Text Elements */
+p,
+ul,
+ol {
+  margin-bottom: var(--spacing-small);
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+a {
+  color: var(--corporate-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 5px solid var(--corporate-border);
+  padding: 0.5em var(--spacing-small);
+  margin: var(--spacing-small) 0;
+  color: var(--corporate-muted);
+}
+
+/* ============================================
+   Code & Syntax Highlighting
+   ============================================ */
+pre, code {
+  font-family: var(--font-family-mono);
+  background-color: var(--corporate-code-bg);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+}
+
+pre {
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  width: 85%;
+  max-width: 85%;
+  margin: 1.5rem auto;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e8ed;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 0.85rem;
+}
+
+/* Code blocks in lists */
+li pre {
+  margin: 0.75rem 0;
+  width: 90%;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slidev-specific code adjustments */
+.slidev-page pre,
+.slidev-layout pre {
+  width: 85%;
+  max-width: 85%;
+  margin: 1.5rem auto;
+}
+
+/* Slidev code wrapper styling */
+.slidev-code-wrapper {
+  width: 85%;
+  max-width: 85%;
+  margin: 1.5rem auto;
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.slidev-code-wrapper pre {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.slidev-code-wrapper .slidev-code {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+/* Shiki syntax highlighting adjustments */
+.shiki {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--corporate-code-bg) !important;
+}
+
+/* Code copy button */
+.slidev-code-copy {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  color: var(--corporate-text);
+}
+
+.slidev-code-copy:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Custom font size utilities for code blocks */
+.slidev-code-wrapper .children\:text-sm * {
+  font-size: 0.75rem !important;
+}
+
+.slidev-code-wrapper .children\:text-base * {
+  font-size: 0.9rem !important;
+}
+
+.slidev-code-wrapper .children\:text-lg * {
+  font-size: 1rem !important;
+}
+
+.slidev-code-wrapper .children\:text-xl * {
+  font-size: 1.1rem !important;
+}
+
+.slidev-code-wrapper .children\:text-2xl * {
+  font-size: 1.25rem !important;
+}
+
+.slidev-code-wrapper .children\:text-3xl * {
+  font-size: 1.5rem !important;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--spacing-small) 0;
+}
+
+th,
+td {
+  border: 1px solid var(--corporate-table-border);
+  padding: 0.8em;
+  text-align: left;
+}
+
+th {
+  background-color: var(--corporate-table-header);
+  font-weight: bold;
+  color: var(--corporate-primary);
+}
+
+/* ============================================
+   Layout Templates
+   ============================================ */
+
+/* Cover Layout */
+.slidev-layout,
+[layout="cover"],
+.layout-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--corporate-light) 0%, #fff 100%);
+}
+
+.layout-cover h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  border-bottom: none;
+}
+
+.layout-cover h2 {
+  font-size: 1.5rem;
+  color: var(--corporate-accent);
+  border-left: none;
+  font-weight: 400;
+  position: static;
+}
+
+/* Section Layout */
+[layout="section"],
+.layout-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--corporate-primary);
+  color: white;
+}
+
+.layout-section h1 {
+  font-size: 3.2rem;
+  color: white;
+  border-bottom: 3px solid var(--corporate-accent);
+  margin-bottom: var(--spacing-small);
+}
+
+.layout-section h2,
+.layout-section h3,
+.layout-section h4,
+.layout-section h5,
+.layout-section h6 {
+  color: white;
+  border-left: none;
+  position: static;
+}
+
+/* Center Layout */
+[layout="center"],
+.layout-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Two Column Layout */
+[layout="two-cols"] .slidev-layout,
+.layout-two-cols .slidev-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-base);
+}
+
+/* ============================================
+   Mermaid Diagrams
+   ============================================ */
+.mermaid {
+  text-align: center;
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+  font-family: var(--font-family-main);
+}
+
+/* Mermaid Styling */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  fill: var(--corporate-primary) !important;
+  stroke: var(--corporate-accent) !important;
+  stroke-width: 2px !important;
+}
+
+.mermaid .nodeLabel,
+.mermaid .node .label {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.mermaid .edgePath .path {
+  stroke: var(--corporate-accent) !important;
+  stroke-width: 2px !important;
+}
+
+.mermaid .arrowheadPath {
+  fill: var(--corporate-accent) !important;
+  stroke: var(--corporate-accent) !important;
+}
+
+.mermaid .actor {
+  fill: var(--corporate-primary) !important;
+  stroke: var(--corporate-accent) !important;
+}
+
+.mermaid .actor-text {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* ============================================
+   GitHub Light Syntax Highlighting
+   ============================================ */
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0;
+  color: #24292f;
+  background: #f6f8fa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #6e7781;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #cf222e;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e36209;
+}
+
+.hljs-literal {
+  color: #0550ae;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #0a3069;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #8250df;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #0550ae;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #8250df;
+}
+
+.hljs-function {
+  color: #8250df;
+}
+
+.hljs-title.function_ {
+  color: #8250df;
+}
+
+.hljs-params {
+  color: #24292f;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+.hljs-tag {
+  color: #116329;
+}
+
+.hljs-tag .hljs-name {
+  color: #116329;
+}
+
+.hljs-tag .hljs-attr {
+  color: #0550ae;
+}
+
+.hljs-property {
+  color: #0550ae;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+
+  .slidev-page,
+  .slidev-layout,
+  .slidev-page-root,
+  .slide-container {
+    padding: var(--spacing-small);
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .layout-cover h1 {
+    font-size: 2.5rem;
+  }
+
+  .layout-section h1 {
+    font-size: 2rem;
+  }
+
+  [layout="two-cols"] .slidev-layout,
+  .layout-two-cols .slidev-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-small);
+  }
+}

@@ -1,24 +1,10 @@
 {
-  "name": "@localhouse/marp-theme-localhouse-blue",
+  "name": "slidev-theme-localhouse-blue",
   "version": "1.0.0",
-  "description": "A professional blue-themed presentation template for Marp with Mermaid diagram support",
-  "main": "localhouse-blue.css",
-  "files": [
-    "src/localhouse-blue.css",
-    "README.md",
-    "examples/example.md"
-  ],
-  "scripts": {
-    "build": "npm run build:css && npm run build:html",
-    "build:css": "cp src/localhouse-blue.css localhouse-blue.css",
-    "build:html": "npx marp examples/example.md --html --theme src/localhouse-blue.css -o examples/example.html",
-    "build:pdf": "npx marp examples/example.md --pdf --theme src/localhouse-blue.css -o examples/example.pdf",
-    "build:pptx": "npx marp examples/example.md --pptx --theme src/localhouse-blue.css -o examples/example.pptx",
-    "dev": "npm run build:css && npm run build:html",
-    "clean": "rm -f localhouse-blue.css examples/*.html examples/*.pdf examples/*.pptx"
-  },
+  "description": "A professional blue-themed presentation template for Slidev with Mermaid diagram support",
   "keywords": [
-    "marp",
+    "slidev-theme",
+    "slidev",
     "theme",
     "presentation",
     "blue",
@@ -29,32 +15,28 @@
   ],
   "author": "LOCALHOUSE",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/localhouse/marp-theme-localhouse-blue"
-  },
-  "bugs": {
-    "url": "https://github.com/localhouse/marp-theme-localhouse-blue/issues"
-  },
-  "homepage": "https://github.com/localhouse/marp-theme-localhouse-blue#readme",
-  "peerDependencies": {
-    "@marp-team/marp-cli": "^3.0.0"
-  },
-  "devDependencies": {
-    "@marp-team/marp-cli": "^3.4.0"
+  "files": [
+    "styles/",
+    "README.md",
+    "example.md"
+  ],
+  "scripts": {
+    "dev": "slidev example.md",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
-  "dependencies": {
-    "@wekanteam/markdown-it-mermaid": "^0.6.4"
+  "devDependencies": {
+    "@slidev/cli": "^0.49.0"
   },
-  "marp": {
-    "themeSet": [
-      "./localhouse-blue.css"
-    ],
-    "markdownItPlugins": [
-      "@wekanteam/markdown-it-mermaid"
-    ]
+  "peerDependencies": {
+    "@slidev/cli": "*"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "highlighter": ["shiki", "prism"],
+    "monaco": "dev"
   }
 }
