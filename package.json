@@ -17,6 +17,9 @@
   "license": "MIT",
   "files": [
     "styles/",
+    "setup/",
+    "index.ts",
+    "slidev.config.js",
     "README.md",
     "example.md"
   ],
